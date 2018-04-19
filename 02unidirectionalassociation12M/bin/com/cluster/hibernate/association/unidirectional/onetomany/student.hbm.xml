@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package = "com.cluster.hibernate.association.unidirectional.onetomany">
+	<class name="Student" table = "STUDENT_12M">
+		<id name="sid" column="STUDENT_ID" type = "int">
+			<generator class="increment"/>
+		</id>
+		<set name="hsAddress"  cascade = "all-delete-orphan" lazy="true">
+			<key column="STUDENT_ID" not-null="true"/>
+			<one-to-many class="Address"/>
+		</set>
+	 	<property name="studentName" column = "STUDENT_NAME"/> 
+	</class>
+
+	<class name="Address" table = "ADDRESS_12M">
+		<id name="addressId" column="ADDRESS_ID" type = "int">
+			<generator class="increment"/>
+		</id>
+	 <property name="zipCode" column = "ZIPCODE"/>
+	</class>
+</hibernate-mapping>	

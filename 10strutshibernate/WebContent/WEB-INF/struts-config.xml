@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "struts-config_1_2.dtd">
+<struts-config>
+
+	<form-beans>
+		<form-bean name="employeeForm"
+			type="com.cluster.action.EmployeeForm" />
+		<form-bean name="employeeListForm"
+			type="com.cluster.action.EmployeeListForm" />
+			
+	</form-beans>
+	
+	<action-mappings> 
+	
+		<action path="/AddEmployee" type="com.cluster.action.EmployeeAction" name="employeeForm" 
+			parameter="method" scope="request" validate="false">
+			<forward name="displayAllEmployees" path="/displayEmployees.jsp"/>
+		</action>
+		
+		<action path="/DeleteEmployee" type="com.cluster.action.EmployeeAction" name="employeeListForm" 
+			parameter="method" scope="request" validate="false">
+			<forward name="displayAllEmployees" path="/displayEmployees.jsp"/>
+		</action>
+		
+		<action path="/DisplayEmployees" type="com.cluster.action.EmployeeAction" name="employeeListForm" 
+			parameter="method" scope="request" validate="false">
+			<forward name="displayAllEmployees" path="/displayEmployees.jsp"/>
+		</action>
+		
+		<action path="/GetEmployee" type="com.cluster.action.EmployeeAction" name="employeeListForm" 
+			parameter="method" scope="request" validate="false">
+			<forward name="getEmployee" path="/employee.jsp"/>
+		</action>
+
+	</action-mappings>
+
+</struts-config> 

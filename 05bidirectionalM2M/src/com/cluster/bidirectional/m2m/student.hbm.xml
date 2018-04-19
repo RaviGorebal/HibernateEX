@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package = "com.cluster.bidirectional.m2m">
+
+	<class name="Student" table = "STUDENT_M2M">
+		<id name="sid" column="STUDENT_ID" type="int">
+			<generator class="increment"/>
+		</id>
+		<property name="studentName" column="STUDENT_NAME"/>
+ 		<set name="hsAddress" cascade="all" table="STUDENT_ADDRESS_M2M" inverse="false">
+			<key column="STUDENT_ID"/>
+			<many-to-many column="ADDRESS_ID"
+			class="Address"/>
+		</set>  		
+	</class>
+	
+	<class name="Address" table = "ADDRESS_M2M">
+		<id name="addressId" column="ADDRESS_ID" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="zipCode" column = "ZIPCODE"/>
+		<set name="hsStudent" table="STUDENT_ADDRESS_M2M" cascade="all" inverse="false">
+			<key column="ADDRESS_ID"/>
+			<many-to-many column="STUDENT_ID" class="Student"/>
+		</set>
+	</class>
+</hibernate-mapping>
+	

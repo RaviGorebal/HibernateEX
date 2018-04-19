@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/oracle&amp;mysql/classes12.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/log4j/log4j.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/ehcache-1.2.3.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/hibernate3.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/hibernate-testing.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/javassist-3.9.0.GA.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/jboss-cache-1.4.1.GA.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/jbosscache-core-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/oscache-2.1.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/proxool-0.8.3.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/slf4j-log4j12.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA/Jar/Hibernate/jar/swarmcache-1.0RC2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

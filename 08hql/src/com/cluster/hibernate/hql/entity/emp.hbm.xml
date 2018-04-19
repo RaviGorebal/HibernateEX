@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.cluster.hibernate.hql.entity">
+	<class name="Employee" table="EMPLOYEE1" >
+		<id name="employeeId" column="EMPLOYEE1_ID" type = "int"> 
+			<generator class="increment"/>
+		</id>
+		<property name="ename" column = "ENAME"/>
+		<property name="job" column = "JOB"/>
+		<property name="hireDate" column = "HIREDATE"/>
+		<property name="salary" column = "SALARY"/>
+		<property name="commission" column = "COMMISSION"/>
+		
+		<many-to-one name="department" 
+			column="DEPARTMENT_ID" class = "Department"/>
+	</class>
+	
+	<class name="Department" table = "DEPARTMENT">
+		<id name="departmentId" column="DEPARTMENT_ID" type = "int">
+			<generator class="increment" />
+		</id>
+		<property name="departmentName" column = "DNAME"/>
+		<property name="location" column = "LOCATION"/>
+		
+		<set name = "hsEmployee" 
+			cascade="all" inverse = "true" >
+			<key column="DEPARTMENT_ID"/>
+			<one-to-many class = "Employee"/>
+		</set>
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

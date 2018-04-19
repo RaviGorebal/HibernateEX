@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+
+<hibernate-mapping package="com.cluster.hqljoin" >
+	<class name="EmployeeAddress" table="EMPLOYEE_ADDRESS">
+		<id name="employeeAddressId" column="EMPLOYEE_ADDRESS_ID"> 
+			<generator class="increment"/>
+		</id>
+		
+		<property name="addressLine1" column = "ADDRESSLINE1"/>
+		<property name="addressLine2" column = "ADDRESSLINE2"/>
+		<many-to-one name="employee" 
+			column ="EMPLOYEE_ID" not-null = "true" class = "Employee"/>
+	</class>
+
+</hibernate-mapping>

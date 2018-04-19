@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+
+<hibernate-mapping package="com.cluster.hqljoin" >
+	<class name="Employee" table="EMPLOYEE" >
+		<id name="employeeId" column="EMPLOYEE_ID"> 
+			<generator class="increment"/>
+		</id>
+		
+		<property name="firstName" column = "FIRST_NAME"/>
+		<property name="lastName" column = "LAST_NAME"/>
+		
+		<set name="hsEmployeeAddress" cascade = "all" inverse = "true" >
+			<key column="EMPLOYEE_ID" not-null = "true"/>
+			<one-to-many class="EmployeeAddress"/>
+		</set>
+		
+		<set name="hsEmployeePhone" cascade = "all" inverse = "true">
+			<key column="EMPLOYEE_ID" not-null = "true"/>
+			<one-to-many class="EmployeePhone"/>
+		</set>
+		
+		
+	</class>
+
+</hibernate-mapping>

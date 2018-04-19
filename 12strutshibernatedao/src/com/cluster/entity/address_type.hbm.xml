@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+
+<hibernate-mapping package="com.cluster.entity" >
+	<class name="AddressType" table="ADDRESS_TYPE">
+		<id name="addressTypeId" column="ADDRESS_TYPE_ID"> 
+			<generator class="sequence">
+				<param name="sequence">ADDRESS_TYPE_SEQ</param>
+			</generator>
+		</id>
+		
+		<property name="type" column = "TYPE"/>
+
+		<set name="employeeAddresses" cascade = "all" inverse = "true">
+			<key column="EMPLOYEE_ADDRESS_ID" not-null = "true"/>
+			<one-to-many class="EmployeeAddress"/>
+		</set>
+		
+		
+	</class>
+
+</hibernate-mapping>

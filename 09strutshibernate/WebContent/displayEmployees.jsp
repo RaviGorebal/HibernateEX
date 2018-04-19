@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html"%>
+<%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
+<head>
+
+<script language="javascript" type="text/javascript">
+	function deleteTheatre()
+	{
+//		document.forms[0].action = "GetTheatre.do?method=getTheatre";
+//		document.forms[0].submit();
+	}
+	function editTheatre()
+	{
+//		document.forms[0].theatreId.value = theatreId;
+//		document.forms[0].action = "GetTheatre.do?method=getTheatre";
+//		document.forms[0].submit();
+	}
+</script>
+</head>
+<body>
+
+
+<h5 id="font"><strong>List of Employee </strong></h5><br /><br />
+<form action="adminEmployee.html">
+<table align="center">
+<tr>
+<td>
+
+<table class="sortable" id="sorter">
+<tr>
+<th class="tdfont">ID</th>
+<th class="tdfont">First Name</th>
+<th class="tdfont">Middle Name</th>
+<th class="tdfont">Last Name</th>
+<th class="tdfont">Edit</th>
+<th class="tdfont">Delete</th>
+</tr>
+
+<logic:present name="EmployeeListForm" property="arlEmployee">
+	<logic:iterate id="employee" name="EmployeeListForm" property="arlEmployee" indexId="listIndexId">
+	<tr>
+		<td class="tdfont"><%=listIndexId + 1%></td>
+		<td class="tdfont"><bean:write name="employee" property="firstName"/></td>
+		<td class="tdfont"><bean:write name="employee" property="middleName"/></td>
+		<td class="tdfont"><bean:write name="employee" property="lastName"/></td>
+		<td class="tdfont"><html:button property="method"  onclick="editTheatre()">Update</html:button></td>
+		<td class="tdfont"><html:button property="method"  onclick="deleteTheatre()">Delete</html:button></td>
+	</tr>			
+	</logic:iterate>
+</logic:present>		             
+</table>
+</td>
+</tr>
+</table>
+<br />
+<br/>
+<strong>
+<p align="center"><input type="submit" value="Add Employee"/> 
+</p>
+</strong>
+</form>
+<br/><br/><br/><br/><br/>
+
+
+</body>
+</html>

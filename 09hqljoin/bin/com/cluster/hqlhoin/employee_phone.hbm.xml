@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.cluster.hqlhoin" >
+	<class name="EmployeePhone" table="EMPLOYEE_PHONE">
+		<id name="employeePhoneId" column="EMPLOYEE_PHONE_ID"> 
+			<generator class="sequence">
+				<param name="sequence">EMPLOYEE_Phone_SEQ</param>
+			</generator>
+
+		</id>
+		
+		<property name="phone" column = "PHONE"/>
+		
+		<many-to-one name="employee" 
+			column ="EMPLOYEE_ID" not-null = "true" class = "Employee" fetch="join" />
+			
+		<many-to-one name="phoneType" 
+			column ="PHONE_TYPE_ID" not-null = "true" class = "PhoneType" />
+			
+	</class>
+</hibernate-mapping>

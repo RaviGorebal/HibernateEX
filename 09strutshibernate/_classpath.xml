@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/servlet-api.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Struts 1.3"/>
+	<classpathentry kind="lib" path="C:/Jar/log4j/log4j.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/antlr-2.7.2.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/bsf-2.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/commons-beanutils-1.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/commons-chain-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/commons-digester-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/commons-fileupload-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/commons-io-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/commons-validator-1.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/jstl-1.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/standard-1.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/struts-core-1.3.10.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/struts-el-1.3.10.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/struts-extras-1.3.10.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/struts-faces-1.3.10.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/struts-mailreader-dao-1.3.10.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/struts-scripting-1.3.10.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/struts-taglib-1.3.10.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Struts/Struts 1.3/struts-1.3.10/lib/struts-tiles-1.3.10.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/ehcache-1.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/hibernate3.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/hibernate-testing.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/javassist-3.9.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/jboss-cache-1.4.1.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/jbosscache-core-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/oscache-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/proxool-0.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/slf4j-log4j12.jar"/>
+	<classpathentry kind="lib" path="C:/Jar/Hibernate/jar/swarmcache-1.0RC2.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

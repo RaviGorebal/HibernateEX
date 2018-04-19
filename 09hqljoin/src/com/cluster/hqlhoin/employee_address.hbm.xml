@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.cluster.hqlhoin" >
+	<class name="EmployeeAddress" table="EMPLOYEE_ADDRESS">
+		<id name="employeeAddressId" column="EMPLOYEE_ADDRESS_ID"> 
+			<generator class="sequence">
+				<param name="sequence">EMPLOYEE_ADDRESS_SEQ</param>
+			</generator>
+
+		</id>
+		
+		<property name="addressLine1" column = "ADDRESSLINE1"/>
+		<property name="addressLine2" column = "ADDRESSLINE2"/>
+		<property name="city" column = "CITY"/>
+		<property name="state" column = "STATE"/>
+		<property name="zipcode" column = "ZIPCODE"/>
+		
+		<many-to-one name="employee" 
+			column ="EMPLOYEE_ID" not-null = "true" class = "Employee" fetch="join"/>
+			
+		<many-to-one name="addressType" 
+			column ="ADDRESS_TYPE_ID" not-null = "true" class = "AddressType" />
+			
+	</class>
+
+</hibernate-mapping>

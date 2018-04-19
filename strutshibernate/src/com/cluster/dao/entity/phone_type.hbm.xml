@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+
+<hibernate-mapping package="com.cluster.dao.entity" >
+	<class name="PhoneType" table="PHONE_TYPE">
+		<id name="phoneTypeId" column="PHONE_TYPE_ID"> 
+			<generator class="sequence">
+				<param name="sequence">PHONE_TYPE_SEQ</param>
+			</generator>
+		</id>
+		
+		<property name="type" column = "TYPE"/>
+		
+		<set name="employeePhones" cascade = "all" inverse = "true">
+			<key column="EMPLOYEE_PHONE_ID" not-null = "true"/>
+			<one-to-many class="EmployeePhone"/>
+		</set>
+	</class>
+
+</hibernate-mapping>

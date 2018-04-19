@@ -1,0 +1,20 @@
+INVERSE
+*******
+
+If you think about the relation between two classes, it may give an idea that student has 
+addresses. (Student -> Addresses)So, it feels like a student is an owner, and an address is a child. 
+Then, you want to think that address is "inverse=true" because address is owned by student.
+However, it's not correct.
+
+Here, I'd like to suggest a way to think about it.
+
+Let's look at table structure instead of classes.
+
+    * STUDENT [STUDENT_ID, NAME, ...]
+    * ADDRESS [ADDRESS_ID, STUDENT_ID, CITY, STREET,...]
+
+
+The STUDENT_ID column in ADDRESS table is the relational information between these two 
+tables. So, ADDRESS is an owner of the relationship, and STUDENT is the inverse side.
+"inverse=true" means "this side is the inverse side", and "inverse=false" means "this is 
+not the inverse side. this side is the owner of the relationship".

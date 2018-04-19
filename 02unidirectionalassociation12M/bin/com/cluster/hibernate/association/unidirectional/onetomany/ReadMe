@@ -1,0 +1,19 @@
+CASCADE
+*******
+1) cascade="none", the default, tells Hibernate to ignore the association.
+
+2) cascade="save-update" tells Hibernate to navigate the association when the transaction is committed 
+   and when an object is passed to save() or update() and save newly instantiated transient instances 
+   and persist changes to detached instances.
+   
+3) cascade="delete" tells Hibernate to navigate the association and delete persistent instances when 
+   an object is passed to delete().
+   
+4) cascade="all" means to cascade both save-update and delete, as well as calls to evict and lock.
+
+5) cascade="all-delete-orphan" means the same as cascade="all" but, in addition, Hibernate deletes 
+   any persistent entity instance that has been removed (dereferenced) from the association 
+   (for example, from a collection).
+   
+6) cascade="delete-orphan" Hibernate will delete any persistent entity instance that has been removed 
+   (dereferenced) from the association (for example, from a collection).

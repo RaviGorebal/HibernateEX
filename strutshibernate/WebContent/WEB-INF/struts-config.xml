@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "struts-config_1_2.dtd">
+<struts-config>
+
+	<form-beans>
+		<form-bean name="EmployeeForm"
+			type="com.cluster.action.EmployeeForm" />
+		<form-bean name="EmployeeListForm"
+			type="com.cluster.action.EmployeeListForm" />
+			
+	</form-beans>
+	
+	<action-mappings> 
+		<action path="/CreateEmployee" type="com.cluster.action.EmployeeAction" name="EmployeeForm" 
+			parameter="method" scope="request" validate="false">
+			<forward name="displayAllEmployees" path="/displayEmployees.jsp"/>
+		</action>
+	</action-mappings>
+
+</struts-config> 
